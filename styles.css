@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+}
+
+.cover {
+    position: relative;
+}
+
+.cover img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2em;
+    margin: 0;
+    padding: 1em;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+nav {
+    background-color: #666;
+    padding: 0.5em;
+    text-align: center;
+}
+
+button {
+    color: #fff;
+    background-color: #333;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5em 1em;
+    margin: 0 1em;
+    cursor: pointer;
+}
+
+input {
+    width: 150px;
+    padding: 0.5em;
+    margin: 0 1em;
+    box-sizing: border-box;
+}
+
+
+/* Add this CSS to highlight the selected employee name */
+#employeeNames li:hover,
+#employeeNames li.highlighted {
+    background-color: #e0e0e0;
+    cursor: pointer;
+}
+
+/* Add some styling for the employee details */
+#employeeDetails {
+    position: fixed;
+    top: 50px; /* Adjust as needed based on your header height */
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+    display: none;
+}
+
+#employeeDetails img {
+    max-width: 100px; /* Adjust as needed based on your design */
+}
+
+/* Add this CSS to limit the size of the employee image */
+.employee-thumbnail {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+
+/* Remove the dots and add numbers in the employee list */
+#employeeNames li {
+    list-style: none;
+    counter-increment: employee-counter;
+    padding-left: 20px;
+}
+
+#employeeNames li::before {
+    content: counter(employee-counter) ". ";
+}
+
+
+
+/* Add some padding to the body to avoid content being hidden behind the fixed header */
+body {
+    padding-top: 50px; /* Adjust as needed based on your header height */
+}
+
+
+/* Add a bottom margin to the employee details section */
+#employeeList {
+    margin-top: 50px; /* Adjust as needed based on your header height */
+}
+
+#employeeList h2 {
+    margin-top: 50px; /* Adjust as needed based on your header height */
+}
+
+
+/* Add a fixed position for TalayTech Employees */
+#talayTechEmployeesHeading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+/* Add some margin to the employee details section */
+#employeeDetails {
+    margin-top: 20px; /* Adjust as needed */
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalayTech</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="cover">
+            <img src="images/cover.png" alt="Cover Image">
+            <h1>TalayTech</h1>
+        </div>
+    </header>
+
+    <nav>
+        <button onclick="openTab('home')">Home</button>
+        <button onclick="openTab('projects')">Projects</button>
+        <button onclick="openTab('about')">About Us</button>
+        <button onclick="openTab('contact')">Contact Us</button>
+        <button onclick="showLoginForm(employees)">Employees</button>
+        <input type="text" placeholder="Search..." />
+    </nav>
+
+    <section id="home">
+        <h2>Welcome to TalayTech</h2>
+        <p>This is the main page of our website. You can explore different sections using the tabs above
+		
+		
+		
+		
+		
+		
+		
+		we see You
+		
+		
+		
+		more....
+		
+		
+		
+		even more....
+		
+		</p>
+    </section>
+
+    <section id="projects" style="display:none;">
+        <h2>Our Projects</h2>
+        <p>Information about our company's projects goes here.</p>
+    </section>
+
+    <section id="about" style="display:none;">
+        <h2>About Us</h2>
+        <p>Details about TalayTech and its background can be found here.</p>
+    </section>
+
+    <section id="contact" style="display:none;">
+        <h2>Contact Us</h2>
+        <p>Contact information and a contact form can be found in this section.</p>
+    </section>
+
+    <section id="employees" style="display:none;">
+        <form id="employeeLoginForm" action="/login" method="post">
+            <label for="employeeUsername">Username:</label>
+            <input type="text" id="employeeUsername" name="employeeUsername" required>
+
+            <label for="employeePassword">Password:</label>
+            <input type="password" id="employeePassword" name="employeePassword" required>
+
+            <button type="button" onclick="validateEmployeeLogin()">Login</button>
+        </form>
+    </section>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
